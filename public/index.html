@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guess the Number</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>🎯 Guess the Number</h1>
+    <p class="sub">I'm thinking of a number between <b>1</b> and <b id="max">100</b>. Can you find it?</p>
+
+    <div id="play">
+      <form id="guessForm">
+        <input id="guess" type="number" min="1" max="100" placeholder="Your guess" autofocus required>
+        <button type="submit">Guess</button>
+      </form>
+      <p id="message" class="message">Make your first guess!</p>
+      <p class="attempts">Attempts: <b id="attempts">0</b></p>
+    </div>
+
+    <div id="win" hidden>
+      <form id="scoreForm">
+        <input id="name" type="text" maxlength="16" placeholder="Your name" required>
+        <button type="submit">Save score</button>
+      </form>
+    </div>
+
+    <button id="newGame" class="secondary">New game</button>
+
+    <h2>🏆 Top 10 (fewest attempts)</h2>
+    <ol id="scores"></ol>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
